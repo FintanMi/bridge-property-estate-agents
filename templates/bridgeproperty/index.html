@@ -106,6 +106,66 @@
         </div>
     </div>
 </section>
+<!-- Form Section -->
+<section class="search">
+    <div class="container text-center">
+        <div class="home-search p-5">
+            <h1 class="display-4 mb-4">
+                Search For Your New Home
+            </h1>
+            <p>
+                Some text
+            </p>
+            <div class="search-form">
+                <form action="{% url 'search' %}">
+                    <!-- Form Row 1 -->
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label class="sr-only">Keywords</label>
+                            <input type="text" name="keywords" class="form-control" placeholder="Keyword (Living Room, Bedroom, etc)">
+                        </div>
+                    
+                        <div class="col-md-4 mb-3">
+                            <label class="sr-only">City</label>
+                            <input type="text" name="city" class="form-control" placeholder="City">
+                        </div>
+                    
+                        <div class="col-md-4 mb-3">
+                            <label class="sr-only">Province</label>
+                            <select name="state" class="form-control">
+                                <option selected="true" disabled="disabled">Province (All)</option>
+                                {% for key,value in province_choices.items %}
+                                <option value="{{ key }}">{{ value }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Form Row 2 -->
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label class="sr-only">Bedrooms</label>
+                            <select name="bedrooms" class="form-control">
+                                <option selected="true" disabled="disabled">Bedrooms (All)</option>
+                                {% for key,value in bedroom_choices.items %}
+                                <option value="{{ key }}">{{ value }}</option>
+                                {% endfor %}
+                    
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <select name="price" class="form-control" id="type">
+                                <option selected="true" disabled="disabled">Max Price (Any)</option>
+                                {% for key,value in price_choices.items %}
+                                <option value="{{ key }}">{{ value }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary btn-block mt-4" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="showcase">
     <div class="showcase-wrap">
         <div class="texture-overlay"></div>
