@@ -12,4 +12,7 @@ class RealtorAdmin(admin.ModelAdmin):
         'email',
         'top_seller',
     )
-    
+    list_display_links = ('name',)
+    search_fields = ('name',)
+    list_per_page = 10
+

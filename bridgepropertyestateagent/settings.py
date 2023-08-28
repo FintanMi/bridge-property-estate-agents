@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'bridgepropertyestateagent',
     'listings',
     'realtors',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
