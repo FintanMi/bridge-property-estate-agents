@@ -52,6 +52,6 @@ def search(request):
         'price_choices': price_choices,
         'bedroom_choices': bedroom_choices,
         'province_choices': province_choices,
-        'listings': queryset_list
+        'listings': queryset_list,
     }
     return render(request, 'listings/search.html', context)
