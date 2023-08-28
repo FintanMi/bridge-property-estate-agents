@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load humanize %}
 {% block content %}
 <section class="features-intro">
     <div class="container-fluid">
@@ -47,154 +48,61 @@
 </section>
 <section class="features-list" id="features">
     <div class="container">
+        <h3 class="text-center mb-3">Latest Listings</h3>
         <div class="row">
-            <div class="col-md-12">
-                <div class="col-md-4 feature-1 wp2">
-                    <!-- Listing 1 -->
+            {% if listings %}
+                {% for listing in listings %}
                     <div class="col-md-6 col-lg-4 mb-4">
                         <div class="card listing-preview">
-                            <img class="card-img-top" src="assets/img/homes/home-1.jpg" alt="">
+                            <img class="card-img-top" src="{{ listing.photo.url }}" width="350px">
                             <div class="card-img-overlay">
                                 <h2>
-                                    <span class="badge badge-secondary text-white">&euro;490,000</span>
+                                    <span class="badge badge-secondary text-white">&euro;{{ listing.price | intcomma }}</span>
                                 </h2>
                             </div>
                             <div class="card-body">
                                 <div class="listing-heading text-center">
-                                    <h4 class="text-primary">45 Drivewood Circle</h4>
+                                    <h4 class="text-primary">{{ listing.address }}</h4>
                                     <p>
-                                        <i class="fas fa-map-marker text-secondary"></i> Norwood MA, 02062
+                                        <i class="fas fa-map-marker text-secondary"></i>{{ listing.town }}
                                     </p>
                                 </div>
                                 <hr>
                                 <div class="row py-2 text-secondary">
                                     <div class="col-6">
-                                        <i class="fas fa-th-large"></i> Sqm: 2500
+                                        <i class="fas fa-th-large"></i> Sqm: {{ listing.sqm }}
                                     </div>
                                 </div>
                                 <div class="row py-2 text-secondary">
                                     <div class="col-6">
-                                        <i class="fas fa-bed"></i> Bedrooms: 3
+                                        <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}
                                     </div>
                                     <div class="col-6">
-                                        <i class="fas fa-bath"></i> Bathrooms: 2
+                                        <i class="fas fa-bath"></i> Bathrooms: {{ listing.bathrooms }}
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row py-2 text-secondary">
                                     <div class="col-6">
-                                        <i class="fas fa-user"></i> Kyle Brown
+                                        <i class="fas fa-user"></i>{{ listing.estate_agent }}
                                     </div>
                                 </div>
                                 <div class="row text-secondary pb-2">
                                     <div class="col-6">
-                                        <i class="fas fa-clock"></i> 5 days ago
+                                        <i class="fas fa-clock"></i>{{ listing.list_date | timesince }}
                                     </div>
                                 </div>
                                 <hr>
-                                <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
+                                <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
                             </div>
                         </div>
                     </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-md-12">
+                    <p>No Listings Available</p>
                 </div>
-                <div class="col-md-4 feature-2 wp2 delay-05s">
-                    <!-- Listing 2 -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card listing-preview">
-                            <img class="card-img-top" src="assets/img/homes/home-2.jpg" alt="">
-                            <div class="card-img-overlay">
-                                <h2>
-                                    <span class="badge badge-secondary text-white">&euro;550,000</span>
-                                </h2>
-                            </div>
-                            <div class="card-body">
-                                <div class="listing-heading text-center">
-                                    <h4 class="text-primary">18 Jefferson Lane</h4>
-                                    <p>
-                                        <i class="fas fa-map-marker text-secondary"></i> Woburn MA, 01801
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-th-large"></i> Sqm: 3200
-                                    </div>
-                                </div>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-bed"></i> Bedrooms: 4
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fas fa-bath"></i> Bathrooms: 2.5
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-user"></i> Mark Hudson
-                                    </div>
-                                </div>
-                                <div class="row text-secondary pb-2">
-                                    <div class="col-6">
-                                        <i class="fas fa-clock"></i> 5 days ago
-                                    </div>
-                                </div>
-                                <hr>
-                                <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 feature-3 wp2 delay-1s">
-                    <!-- Listing 3 -->
-                    <div class="col-md-6 col-lg-4 mb-4">
-                        <div class="card listing-preview">
-                            <img class="card-img-top" src="assets/img/homes/home-3.jpg" alt="">
-                            <div class="card-img-overlay">
-                                <h2>
-                                    <span class="badge badge-secondary text-white">&euro;580,000</span>
-                                </h2>
-                            </div>
-                            <div class="card-body">
-                                <div class="listing-heading text-center">
-                                    <h4 class="text-primary">187 Woodrow Street</h4>
-                                    <p>
-                                        <i class="fas fa-map-marker text-secondary"></i> Salem MA, 01915
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-th-large"></i> Sqm: 3107
-                                    </div>
-                                </div>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-bed"></i> Bedrooms: 4
-                                    </div>
-                                    <div class="col-6">
-                                        <i class="fas fa-bath"></i> Bathrooms: 3
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="row py-2 text-secondary">
-                                    <div class="col-6">
-                                        <i class="fas fa-user"></i> Mark Hudson
-                                    </div>
-                                </div>
-                                <div class="row text-secondary pb-2">
-                                    <div class="col-6">
-                                        <i class="fas fa-clock"></i> 5 days ago
-                                    </div>
-                                </div>
-                                <hr>
-                                <a href="listing.html" class="btn btn-primary btn-block">More Info</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            {% endif %}
         </div>
     </div>
 </section>
