@@ -29,8 +29,29 @@
                         <li><a href="{% url 'listings' %}">Property Listings</a></li>
                     </ul>
                     <ul>
+                        {% if user.is_authenticated %}
+                            <li
+                            {% if 'dashboard' in request.path %}
+                            class="nav-item"
+                            {% else %}
+                            class="nav-item"
+                            {% endif %}
+                            ><a href="{% url 'dashboard' %}" class="nav-link">
+                                Welcome {{ user.username }}
+                            </a></li>
+                            <li class="nav-item">
+                                <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
+                                    <i class="fas fa-sign-out-alt"></i>Logout
+                                </a>
+                                <form action="{% url 'logout' %}" id="logout" method="POST">
+                                    {% csrf_token %}
+                                    <input type="hidden">
+                                </form>
+                            </li>
+                        {% else %}
                         <li><a href="{% url 'login' %}">Login</a></li>
                         <li><a href="{% url 'register' %}">Register</a></li>
+                        {% endif %}
                     </ul>
                 </nav>
             </div>
