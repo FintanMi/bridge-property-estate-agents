@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('bridgeproperty.urls')),
     path('admin/', admin.site.urls),
     path('listings/', include('listings.urls')),
+    path('account/', include('account.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

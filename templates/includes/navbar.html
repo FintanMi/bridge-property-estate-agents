@@ -1,35 +1,38 @@
 {% load static %}
 <header>
-    <section class="hero">
-        <div class="texture-overlay"></div>
-        <div class="container">
-            <div class="row nav-wrapper">
-                <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                    <a href="{% url 'index' %}"><img src="{% static 'img/iconsroofwhite.png' %}" alt="Bridge Property Logo"></a>
+        <section class="hero">
+            <div class="texture-overlay"></div>
+            <div class="container">
+                <div class="row nav-wrapper">
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/iconsroofwhite.png' %}"
+                                alt="Bridge Property Logo"></a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+                        <p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+                    </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-                    <p>MENU</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+                <div class="row hero-content">
+                    <div class="col-md-12">
+                        <h1 class="animated fadeInDown">An Exclusive, Premium HTML5 &amp; CSS3 Template created exlusively
+                            for .</h1>
+                        <a href="{% url 'about' %}" class="use-btn animated fadeInUp">About</a>
+                        <a href="{% url 'listings' %}" class="learn-btn animated fadeInUp">Property Listings <i
+                                class="fa fa-arrow-down"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="row hero-content">
-                <div class="col-md-12">
-                    <h1 class="animated fadeInDown">An Exclusive, Premium HTML5 &amp; CSS3 Template created exlusively
-                        for .</h1>
-                    <a href="{% url 'about' %}" class="use-btn animated fadeInUp">About</a>
-                    <a href="{% url 'listings' %}" class="learn-btn animated fadeInUp">Property Listings <i class="fa fa-arrow-down"></i></a>
-                </div>
+            <div class="overlay overlay-boxify">
+                <nav>
+                    <ul>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'listings' %}">Property Listings</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{% url 'login' %}">Login</a></li>
+                        <li><a href="{% url 'register' %}">Register</a></li>
+                    </ul>
+                </nav>
             </div>
-        </div>
-        <div class="overlay overlay-boxify">
-            <nav>
-                <ul>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'listings' %}">Property Listings</a></li>
-                </ul>
-                <ul>
-                    <li><a href="#">Login/Register</a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>
+        </section>
 </header>
