@@ -1062,3 +1062,31 @@ Waypoints
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+
+/* Form Section */
+.search {
+    padding: 130px 0;
+}
+
+.kw,
+.town,
+.province,
+.bedrooms,
+.max-price {
+    padding-bottom: 10px;
+}
+
+.index-btn,
+.info-btn {
+    background-image: linear-gradient(to bottom right, #1e00a6, #0c0042);
+    color: #fff;
+    border-color: #0c0042;
+}
+
+/* listings */
+.card {
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+

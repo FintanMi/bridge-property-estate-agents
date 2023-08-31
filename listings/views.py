@@ -3,6 +3,7 @@ from .models import Listing
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .choices import price_choices, bedroom_choices, province_choices
 
+
 def index(request):
     listings = Listing.objects.order_by('-list_date').filter(is_published=True)
     paginator = Paginator(listings, 3)
@@ -12,6 +13,7 @@ def index(request):
         'listings': paged_listings
     }
     return render(request, 'listings/listings.html', context)
+
 
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)

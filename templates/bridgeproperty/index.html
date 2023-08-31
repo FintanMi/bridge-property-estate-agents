@@ -9,37 +9,25 @@
             <div class="col-md-6 nopadding features-intro-img">
                 <div class="features-bg">
                     <div class="texture-overlay"></div>
-                    <!-- <div class="features-img wp1">
-                        <img src="{% static 'img/iconsroofwhite.png' %}" alt="Bridge Property">
-                    </div> -->
                 </div>
             </div>
             <div class="col-md-6 nopadding">
                 <div class="features-slider">
                     <ul class="slides" id="featuresSlider">
                         <li>
-                            <h1>The Fore-front of Design &amp; Technology</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
-                            <p><a href="#features" class="arrow-btn">Find out why this freebie rocks! <i
+                            <h1>What are you looking for?</h1>
+                            <p>Our estate agents are trusted by thousands of buyers nationwide</p>
+                            <p><a href="{% url 'about' %}" class="arrow-btn">Find out why <i
                                         class="fa fa-long-arrow-right"></i></a></p>
                         </li>
                         <li>
-                            <h1>Multi-Purpose User Centric Design</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
-                            <p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this
-                                    freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>
-                        </li>
-                        <li>
-                            <h1>Made with Love, Released for Free</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus.</p>
-                            <p><a href="http://tympanus.net/codrops/?p=22554" class="arrow-btn">Find out why this
-                                    freebie rocks! <i class="fa fa-long-arrow-right"></i></a></p>
+                            <h1>Recent Listings</h1>
+                            <p>Search for the latest properties on the market.
+                                We work with a range of developers and home builders
+                                to deliver the best quality homes
+                            </p>
+                            <p><a href="{% url 'listings' %}" class="arrow-btn">
+                                Check our properties<i class="fa fa-long-arrow-right"></i></a></p>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +86,7 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                                <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block info-btn">More Info</a>
                             </div>
                         </div>
                     </div>
@@ -118,24 +106,21 @@
             <h1 class="display-4 mb-4">
                 Search For Your New Home
             </h1>
-            <p>
-                Some text
-            </p>
             <div class="search-form">
                 <form action="{% url 'search' %}">
                     <!-- Form Row 1 -->
                     <div class="form-row">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 kw">
                             <label class="sr-only">Keywords</label>
                             <input type="text" name="keywords" class="form-control" placeholder="Keyword (Living Room, Bedroom, etc)">
                         </div>
                     
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 town">
                             <label class="sr-only">Town</label>
                             <input type="text" name="town" class="form-control" placeholder="Town">
                         </div>
                     
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 province">
                             <label class="sr-only">Province</label>
                             <select name="province" class="form-control">
                                 <option selected="true" disabled="disabled">Province (All)</option>
@@ -147,7 +132,7 @@
                     </div>
                     <!-- Form Row 2 -->
                     <div class="form-row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 bedrooms">
                             <label class="sr-only">Bedrooms</label>
                             <select name="bedrooms" class="form-control">
                                 <option selected="true" disabled="disabled">Bedrooms (All)</option>
@@ -157,7 +142,7 @@
                     
                             </select>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 max-price">
                             <select name="price" class="form-control" id="type">
                                 <option selected="true" disabled="disabled">Max Price (Any)</option>
                                 {% for key,value in price_choices.items %}
@@ -165,7 +150,7 @@
                                 {% endfor %}
                             </select>
                         </div>
-                        <button class="btn btn-secondary btn-block mt-4" type="submit">Submit</button>
+                        <button class="btn btn-secondary btn-block mt-4 index-btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -182,7 +167,7 @@
                             <div class="showcase-slider">
                                 <ul class="slides" id="showcaseSlider">
                                     <li>
-                                        <img src="img/screen1.jpg" alt="Device Content Image">
+                                        <img src="{% static 'img/home.jpg' %}" alt="listing photo" style="object-fit:cover;">
                                     </li>
                                     <li>
                                         <img src="img/screen2.jpg" alt="Device Content Image">
@@ -227,122 +212,6 @@
                 <p><a href="#screenshots" class="arrow-btn">See the screenshots! <i
                             class="fa fa-long-arrow-right"></i></a></p>
             </div>
-        </div>
-    </div>
-</section>
-<section class="screenshots" id="screenshots">
-    <div class="container-fluid">
-        <div class="row">
-            <ul class="grid">
-                <li>
-                    <figure>
-                        <img src="img/01-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/01.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Optimised For Design</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/02-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/02.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>User Centric Design</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/03-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/03.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Responsive and Adaptive</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/04-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/04.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Absolutely Free</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </div>
-        <div class="row">
-            <ul class="grid">
-                <li>
-                    <figure>
-                        <img src="img/05-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/05.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Multi-Purpose Design</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/06-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/06.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Exclusive to Codrops</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/07-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/07.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>Made with Love</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="img/08-screenshot.jpg" alt="Screenshot 01">
-                        <figcaption>
-                            <div class="caption-content">
-                                <a href="img/large/08.jpg" class="single_image">
-                                    <i class="fa fa-search"></i><br>
-                                    <p>In Sydney, Australia</p>
-                                </a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </li>
-            </ul>
         </div>
     </div>
 </section>

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load humanize%}
+{% load humanize %}
 {% block title %} | {{ listing.title }} {% endblock %}
 {% block content%}
 <section id="showcase-inner" class="py-5 text-white">
@@ -39,40 +39,7 @@
         <div class="row">
             <div class="col-md-9">
                 <!-- Home Main Image -->
-                <img src="{{ listing.photo.url }}" width="500px" class="img-main img-fluid mb-3">
-                <!-- Thumbnails -->
-                <!-- <div class="row mb-5 thumbs">
-                    <div class="col-md-2">
-                        <a href="#" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-1.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="assets/img/homes/home-inside-2.jpg" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-2.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="assets/img/homes/home-inside-3.jpg" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-3.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="assets/img/homes/home-inside-4.jpg" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-4.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="assets/img/homes/home-inside-5.jpg" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-5.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="col-md-2">
-                        <a href="assets/img/homes/home-inside-6.jpg" data-lightbox="home-images">
-                            <img src="assets/img/homes/home-inside-6.jpg" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                </div> -->
+                <img src="{{ listing.photo.url }}" width="600px" class="img-main img-fluid mb-3">
                 <!-- Fields -->
                 <div class="row mb-5 fields">
                     <div class="col-md-6">
@@ -121,11 +88,11 @@
                 <div class="card mb-3">
                     <img class="card-img-top" src="{{ listing.realtor.photo.url }}">
                     <div class="card-body">
-                        <h5 class="card-title">Estate Agent</h5>
-                        <h6 class="text-secondary">{{ listing.estate_agent }}</h6>
+                        <h3 class="card-title">Estate Agent</h3>
+                        <h4 class="text-secondary">{{ listing.estate_agent }}</h4>
                     </div>
                 </div>
-                <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An
+                <button class="btn-block btn-lg info-btn" data-toggle="modal" data-target="#inquiryModal">Make An
                     Inquiry</button>
             </div>
         </div>
