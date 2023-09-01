@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <h1 class="display-4">{{ listing.title }}</h1>
                 <p class="lead">
-                    <i class="fas fa-map-marker"></i>{{ listing.address }}
+                    <i class="fas fa-map-marker"></i> {{ listing.address }}
                 </p>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <li class="breadcrumb-item">
                     <a href="{% url 'listings' %}">Listings</a>
                 </li>
-                <li class="breadcrumb-item active">{{ listing.title }}</li>
+                <li class="breadcrumb-item">{{ listing.title }}</li>
             </ol>
         </nav>
     </div>
@@ -69,7 +69,7 @@
                                 <span class="float-right">{{ listing.list_date }}</span>
                             </li>
                             <li class="list-group-item text-secondary">
-                                <i class="fas fa-bed"></i> Estate Agent:
+                                <i class="fas fa-user"></i> Estate Agent:
                                 <span class="float-right">{{ listing.estate_agent }}
                                 </span>
                             </li>
