@@ -47,13 +47,13 @@
                         </thead>
                         <tbody>
                             {% for con in contact %}
-                                <tr>
-                                    <td>{{ contact.id }}</td>
-                                    <td>{{ contact.listing }}</td>
-                                    <td>
-                                        <a class="btn btn-light" href="{% url 'listing' contact.listing_id %}">View Listing</a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>{{ contact.id }}</td>
+                                <td>{{ contact.listing }}</td>
+                                <td>
+                                    <a class="btn btn-light" href="{% url 'listing' listing_id %}">View Listing</a>
+                                </td>
+                            </tr>
                             {% endfor %}
                         </tbody>
                     </table>

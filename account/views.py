@@ -3,6 +3,7 @@ from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from contact.models import Contact
 
+
 def register(request):
     if request.method == 'POST':
         first_name = request.POST['first_name']

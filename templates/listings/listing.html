@@ -26,7 +26,7 @@
                 <li class="breadcrumb-item">
                     <a href="{% url 'listings' %}">Listings</a>
                 </li>
-                <li class="breadcrumb-item">{{ listing.title }}</li>
+                <li class="breadcrumb-item active">{{ listing.title }}</li>
             </ol>
         </nav>
     </div>
@@ -104,7 +104,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="inquiryModalLabel">Make An Inquiry</h5>
+                <h3 class="modal-title" id="inquiryModalLabel"><em>Make An Inquiry</em></h3>
                 <button type="button" class="close" data-dismiss="modal">
                     <span>&times;</span>
                 </button>
@@ -142,7 +142,7 @@
                         <textarea name="message" class="form-control"></textarea>
                     </div>
                     <hr>
-                    <input type="submit" value="Send" class="btn btn-block btn-secondary">
+                    <input type="submit" value="Send" class="btn btn-block btn-secondary info-btn">
                 </form>
             </div>
         </div>

@@ -1093,7 +1093,24 @@ Waypoints
 /* Login */
 .card-header {
     background-image: linear-gradient(to bottom right, #1e00a6, #0c0042);
+    color: #fff;
     padding: 2px 0;
     margin-bottom: 5px;
     text-transform: uppercase;
+}
+
+.login-submit {
+    background-image: linear-gradient(to bottom right, #1e00a6, #0c0042);
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+}
+
+.login-submit:hover {
+    color: #fff;
+}
+
+/* Inquiry Modal */
+.modal-title {
+    color: #0c0042;
 }

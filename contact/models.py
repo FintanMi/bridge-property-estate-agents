@@ -1,10 +1,11 @@
 from django.db import models
 from datetime import datetime
 
+
 class Contact(models.Model):
     listing = models.CharField(max_length=100)
     listing_id = models.IntegerField()
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=100)
     email = models.EmailField(max_length=50)
     phone = models.CharField(max_length=50)
     message = models.TextField(blank=True)
