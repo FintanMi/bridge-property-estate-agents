@@ -48,8 +48,8 @@
                         <tbody>
                             {% for con in contact %}
                             <tr>
-                                <td>{{ contact.id }}</td>
-                                <td>{{ contact.listing }}</td>
+                                <td>{{ con.id }}</td>
+                                <td>{{ con.listing }}</td>
                                 <td>
                                     <a class="btn btn-light" href="{% url 'listing' listing_id %}">View Listing</a>
                                 </td>
