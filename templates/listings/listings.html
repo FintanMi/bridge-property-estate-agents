@@ -127,36 +127,4 @@
         </div>
     </div>
 </section>
-
-<!-- <section class="listings">
-    <div class="row" id="row">
-        {% if listings %}
-        {% for listing in listings %}
-        <div class="column">
-            <img class="card-img-top" src="{{ listing.photo.url }}" width="300px">
-            <div class="card">
-                <span class="badge badge-secondary text-white">&euro;{{ listing.price | intcomma }}</span>
-                <h4 class="text-primary">{{ listing.address }}</h4>
-                <p>
-                    <i class="fas fa-map-marker text-secondary"></i> {{ listing.town }}
-                </p>
-                <i class="fas fa-th-large"></i> Sqm: {{ listing.sqm }}
-                <i class="fas fa-bed"></i> Bedrooms: {{ listing.bedrooms }}
-                <i class="fas fa-bath"></i> Bathrooms: {{listing.bathrooms }}
-                <i class="fas fa-user"></i> {{ listing.estate_agent }}
-                <i class="fas fa-clock"></i> {{ listing.list_date | timesince }}
-                <hr>
-                <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block btn-info">More Info</a>
-            </div>
-        </div>
-    </div>
-    {% endfor %}
-    {% else %}
-    <div class="col-md-12">
-        <p>No Listings Available</p>
-    </div>
-    {% endif %}
-</section> -->
-
-
 {% endblock %}

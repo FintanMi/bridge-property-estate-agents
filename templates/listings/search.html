@@ -2,25 +2,25 @@
 {% load humanize %}
 {% block title %} | Search {% endblock %}
 {% block content %}
-<section id="showcase-inner" class="showcase-search text-white py-5">
+<section id="showcase-inner" class="showcase-search text-white py-5 search-page-form">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
                 <form action="{% url 'search' %}">
                     <!-- Form Row 1 -->
                     <div class="form-row">
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 kw">
                             <label class="sr-only">Keywords</label>
                             <input type="text" name="keywords" class="form-control"
                                 placeholder="Keyword (Bedroom, Living Room, etc)">
                         </div>
 
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 town">
                             <label class="sr-only">Town</label>
                             <input type="text" name="town" class="form-control" placeholder="Town">
                         </div>
 
-                        <div class="col-md-4 mb-3">
+                        <div class="col-md-4 mb-3 province">
                             <label class="sr-only">Province</label>
                             <select name="province" class="form-control">
                                 <option selected="true" disabled="disabled">Province</option>
@@ -32,7 +32,7 @@
                     </div>
                     <!-- Form Row 2 -->
                     <div class="form-row">
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-6 mb-3 bedrooms">
                             <label class="sr-only">Bedrooms</label>
                             <select name="bedrooms" class="form-control">
                                 <option selected="true" disabled="disabled">Bedrooms (Any)</option>
@@ -50,7 +50,7 @@
                             </select>
                         </div>
                     </div>
-                    <button class="btn btn-secondary btn-block mt-4" type="submit">Submit</button>
+                    <button class="btn btn-secondary btn-block mt-4 index-btn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
@@ -122,7 +122,7 @@
                             </div>
                         </div>
                         <hr>
-                        <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block">More Info</a>
+                        <a href="{% url 'listing' listing.id %}" class="btn btn-primary btn-block btn-info">More Info</a>
                     </div>
                 </div>
             </div>

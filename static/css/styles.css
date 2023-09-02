@@ -1114,3 +1114,18 @@ Waypoints
 .modal-title {
     color: #0c0042;
 }
+
+/* About Page Team Info */
+.team-photo {
+    border-radius: 50%;
+    width: 280px;
+}
+
+/* Search Page */
+.search-page-form {
+    margin-top: 10px;
+}
+
+.index-btn:hover {
+    color: #fff;
+}

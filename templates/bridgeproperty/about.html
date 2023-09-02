@@ -22,7 +22,7 @@
                     <a href="{% url 'index' %}">
                         <i class="fas fa-home"></i> Home</a>
                 </li>
-                <li class="breadcrumb-item"> About</li>
+                <li class="breadcrumb-item active"> About</li>
             </ol>
         </nav>
     </div>
@@ -45,7 +45,7 @@
                 {% if top_seller %}
                     {% for agent in top_seller %}
                         <div class="card">
-                            <img class="card-img-top" src="{{ agent.photo.url }}" alt="Seller of the month">
+                            <img class="card-img-top" src="{{ agent.photo.url }}" alt="Seller of the month" width="210px">
                             <div class="card-body">
                                 <h5 class="card-title">Seller Of The Month</h5>
                                 <h6 class="text-secondary">{{ agent.name }}</h6>
@@ -76,8 +76,8 @@
             {% if estate_agent %}
                 {% for agent in estate_agent %}
                     <div class="col-md-4">
-                        <img src="{{ agent.photo.url }}" alt="estate agent photo" class="rounded-circle mb-3">
-                        <h4>{{ estate_agent.image }}</h4>
+                        <img src="{{ agent.photo.url }}" alt="estate agent photo" class="rounded-circle mb-3 team-photo">
+                        <h4>{{ agent.name }}</h4>
                         <p class="text-success">
                             <i class="fas fa-award text-success mb-3"></i> Estate Agent
                         </p>
