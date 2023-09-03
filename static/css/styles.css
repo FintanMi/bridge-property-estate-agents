@@ -1141,3 +1141,30 @@ Waypoints
 .btn-delete:hover {
     color: #fff;
 }
+
+/* Map */
+#map-about {
+    margin-top: 20px;
+}
+
+.map {
+    overflow: hidden;
+    background: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.map iframe {
+    min-height: 25rem;
+    width: 100%;
+    border-radius: 1rem;
+    margin-left: 1rem;
+}
+
+.opening-hours {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    line-height: 32px;
+}
