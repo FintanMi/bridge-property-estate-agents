@@ -450,12 +450,12 @@ p {
     line-height: 25px;
 }
 a {
-    color: #73d0da;
+    color: rgba(12, 0, 66, 0.8);
 }
-a:hover, a:focus {
-    color: #73d0da;
+/* a:hover, a:focus {
+    color: rgba(12, 0, 66, 0.9);
     text-decoration: none;
-}
+} */
 .texture-overlay {
     position: absolute;
     top: 0px;
@@ -478,8 +478,7 @@ Buttons
     font-size: 16px;
 }
 .use-btn:hover, .use-btn:focus {
-    background-color: #351aaf;
-    color: #e9e6f6;
+    background-color: #fff;
     text-decoration: none;
 }
 .learn-btn, .download-btn {
@@ -490,10 +489,8 @@ Buttons
     color: #fff;
     font-size: 16px;
 }
-.learn-btn:hover, .download-btn:hover, .learn-btn:focus, .download-btn:focus {
-    /* border-color: #351aaf; */
-    color: #351aaf;
-    background-color: #fff;
+.learn-btn:hover, .learn-btn:focus {
+    color: #fff;
     text-decoration: none;
 }
 
@@ -507,7 +504,6 @@ Buttons
     color: #fff;
     text-transform: uppercase;
 }
-
 .read-more-btn {
     display: inline-block;
     color: #323a45;
@@ -516,6 +512,12 @@ Buttons
 }
 .read-more-btn i, .download-btn i {
     margin-left: 5px
+}
+.arrow-btn {
+    color: #bcb3e4;
+}
+.arrow-btn:hover {
+    color: #fff;
 }
 .showcase .download-btn {
     margin-top: 50px
@@ -655,7 +657,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-color: rgba(30, 0, 166, .95)
+    background-color: rgba(30, 0, 166, .98)
 }
 .features-slider ul {
     margin: 0;
