@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from contact.models import Contact
@@ -69,3 +69,15 @@ def dashboard(request):
         'user_contact': user_contact
     }
     return render(request, 'account/dashboard.html', context)
+
+
+def delete_button(request, id):
+    delete = get_object_or_404(Contact, pk=id)
+    context = {
+        'delete': delete
+    }
+
+    if request.method == 'GET':
+        delete.delete()
+        messages.success(request, 'You have deleted your query')
+        return render(request, 'account/dashboard.html', context)

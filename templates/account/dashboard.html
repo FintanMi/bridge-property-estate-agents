@@ -51,7 +51,10 @@
                                 <td>{{ con.id }}</td>
                                 <td>{{ con.listing }}</td>
                                 <td>
-                                    <a class="btn btn-light" href="{% url 'listing' con.listing_id %}">View Listing</a>
+                                    <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}">View Listing</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-delete" href="{% url 'delete_button' con.listing_id %}">Delete</a>
                                 </td>
                             </tr>
                             {% endfor %}

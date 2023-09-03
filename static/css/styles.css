@@ -1131,3 +1131,13 @@ Waypoints
 .index-btn:hover {
     color: #fff;
 }
+
+/* Dashboard */
+.btn-delete {
+    background-image: linear-gradient(to bottom right, #dd1818, #b11313);
+    color: #fff;
+}
+
+.btn-delete:hover {
+    color: #fff;
+}
