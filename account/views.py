@@ -73,11 +73,5 @@ def dashboard(request):
 
 def delete_button(request, id):
     delete = get_object_or_404(Contact, pk=id)
-    context = {
-        'delete': delete
-    }
-
-    if request.method == 'GET':
-        delete.delete()
-        messages.success(request, 'You have deleted your query')
-        return render(request, 'account/dashboard.html', context)
+    delete.delete()
+    return redirect('dashboard')

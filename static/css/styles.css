@@ -481,7 +481,7 @@ Buttons
     background-color: #fff;
     text-decoration: none;
 }
-.learn-btn, .download-btn {
+.learn-btn {
     display: inline-block;
     padding: 18px 46px;
     border: 2px solid #fff;
@@ -924,7 +924,7 @@ footer p {
     font-size: 12px;
 }
 footer ul {
-    margin-top: 30px
+    margin-top: 30px;
 }
 footer li {
     float: left;
@@ -934,10 +934,24 @@ footer li {
     font-weight: 400;
 }
 footer li a {
-    color: #3f6184
+    color: #3f6184;
 }
 footer li:last-child {
-    margin-right: 0
+    margin-right: 0;
+}
+
+@media (max-width:800px) {
+    footer ul {
+        display: inline-block;
+    }
+
+    footer li {
+        margin-bottom: 25px;
+    }
+
+    footer li:not(:last-child) {
+        margin-bottom: 25px;
+    }
 }
 
 /* ==========================================================================
@@ -1142,6 +1156,10 @@ Waypoints
     color: #fff;
 }
 
+.fa-trash {
+    color: #fff;
+}
+
 /* Map */
 #map-about {
     margin-top: 20px;
@@ -1168,3 +1186,20 @@ Waypoints
     align-items: center;
     line-height: 32px;
 }
+
+/* Photos */
+.img-main {
+    width: 80%;
+    height: 75%;
+}
+
+.img-about {
+    width: 100%;
+    height: 85%;
+}
+
+/* Appointment */
+.btn-appointment {
+    margin-top: 2rem;
+}
+

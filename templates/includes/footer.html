@@ -2,17 +2,19 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-md-5 text-center">
                 <h1 class="footer-logo">
                     <a href="{% url 'index' %}"><img src="{% static 'img/iconroof.png' %}" alt="Footer Logo"></a>
                 </h1>
                 <p><em>&copy; Bridge Property</em></p>
             </div>
-            <div class="col-md-7">
-                <ul class="footer-nav">
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'listings' %}">Property Listings</a></li>
-                </ul>
+            <div class="col-md-7 text-center">
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'listings' %}">Property Listings</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

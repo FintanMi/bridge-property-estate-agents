@@ -54,7 +54,10 @@
                                     <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}">View Listing</a>
                                 </td>
                                 <td>
-                                    <a class="btn btn-delete" href="{% url 'delete_button' con.listing_id %}">Delete</a>
+                                    <a class="btn btn-light index-btn" href="{% url 'appointment' %}">Make Appointment</a>
+                                </td>
+                                <td>
+                                    <a class="btn btn-delete" href="{% url 'delete_button' con.id %}" onclick="return confirm('Are you sure you want to delete this listing?')"><i class="fa fa-trash"></i> Delete</a>
                                 </td>
                             </tr>
                             {% endfor %}
