@@ -74,4 +74,5 @@ def dashboard(request):
 def delete_button(request, id):
     delete = get_object_or_404(Contact, pk=id)
     delete.delete()
+    messages.success(request, 'You have deleted your query')
     return redirect('dashboard')
