@@ -1148,3 +1148,8 @@ Waypoints
     text-align: center;
 }
 
+/* Particles JS */
+#particles-js {
+    width: 100%;
+    height: 35vh;
+}

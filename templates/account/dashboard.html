@@ -40,7 +40,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <!-- <th scope="col">#</th> -->
+                                <th scope="col">#</th>
                                 <th scope="col">Property</th>
                                 <th></th>
                             </tr>
@@ -48,7 +48,7 @@
                         <tbody>
                             {% for con in user_contact %}
                             <tr>
-                                <!-- <td>{{ con.id }}</td> -->
+                                <td>{{ con.id }}</td>
                                 <td>{{ con.listing }}</td>
                                 <td>
                                     <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}">View Listing</a>
