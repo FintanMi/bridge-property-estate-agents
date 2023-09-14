@@ -1,3 +1,7 @@
 from django.test import TestCase
+from .models import Realtor
 
-# Create your tests here.
+
+class TestRealtor(TestCase):
+    def test_realtor_name(self):
+        

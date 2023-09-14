@@ -3,6 +3,7 @@ from realtors.models import Realtor
 from cloudinary.models import CloudinaryField
 from datetime import datetime
 
+
 class Listing(models.Model):
     estate_agent = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
     title = models.CharField(max_length=100)
