@@ -497,7 +497,7 @@ Buttons
     text-transform: uppercase;
     font-weight: 400;
 }
-.read-more-btn i, .download-btn i {
+.read-more-btn i {
     margin-left: 5px
 }
 .arrow-btn {
