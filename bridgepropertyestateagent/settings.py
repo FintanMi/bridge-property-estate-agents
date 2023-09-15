@@ -19,6 +19,8 @@ if os.path.isfile('env.py'):
 
 from django.contrib.messages import constants as messages
 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -31,10 +33,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
 
 ALLOWED_HOSTS = ['8000-fintanmi-bridge-property-t5cra9eppz.us2.codeanyapp.com',
-                 'bridge-property-estate-agent-e4f2ca60f42a.herokuapp.com']
+    'bridge-property-estate-agent-e4f2ca60f42a.herokuapp.com']
 
 
 # Application definition
@@ -87,8 +90,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'bridgepropertyestateagent.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+#Database
+#https://docs.djangoproject.com/en/3.2/ref/settings/databases
+
 
 # DATABASES = {
 #     'default': {
