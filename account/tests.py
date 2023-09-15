@@ -4,18 +4,6 @@ from django.contrib.auth import get_user_model
 
 
 class TestAccount(TestCase):
-    # def setUp(self):
-    #     username = 'admin'
-    #     password = 'theposhci'
-    #     user_model = get_user_model()
-
-    #     self.user = user_model.objects.create_user(
-    #         username=username,
-    #         password=password,
-    #         is_superuser=True
-    #     )
-    #     logged_in = self.client.login(username=username, password=password)
-    #     self.assertTrue(logged_in)
 
     def test_register_page(self):
         response = self.client.get(reverse('register'))

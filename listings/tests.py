@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Listing
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 
 class TestListing(TestCase):
@@ -19,7 +20,11 @@ class TestListing(TestCase):
         logged_in = self.client.login(username=username, password=password)
         self.assertTrue(logged_in)
 
-    def test_listing(self):
-        response = self.client.get('templates/listings/listings.html')
+    def test_listings(self):
+        response = self.client.get('/listings/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'templates/listings/listings.html')
+    
+    def test_search(self):
+        response = self.client.get(reverse('search'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'listings/search.html')
