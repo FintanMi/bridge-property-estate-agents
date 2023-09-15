@@ -632,8 +632,8 @@ Features Slider
     background-size: cover;
 }
 .features-img {
-    width: 100%;
-    height: 400px;
+    width: 50%;
+    height: 60vh;
     text-align: center;
     line-height: 400px;
 }
