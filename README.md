@@ -3,8 +3,27 @@
 Bridge Property Estate Agents is a fictional property business that's located in Celbridge, Kildare. The website is made to allow potential customers to browse houses that are for sale nationwide. If customers are interested in viewing a property, they can get in contact with an estate agent via a form. Staff can then easily manage inquries and listings.
 
 ## Table of Contents
+- [Styling](#styling)
 - [Technologies](#technologies)
 - [Testing](#testing)
+
+### Database-Design
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected to the listings, realtors, account and contact apps, linked by key relationships.
+
+### Security
+Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
+
+## Styling
+### Colour
+The main colours used were #1e00a6 and #0c0042 in a linear gradient to the bottom right to produce a dark blue colour.
+
+### Typography
+The Nunito font was used throughout the website. This font is from google fonts and was imported into the style sheet.
+
+### Imagery
+The Website logo was made using icons8 in white and blue
+
+The listing images were taken from Pexels which is a royalty free image site.
 
 ## Technologies
 - HTML
@@ -12,7 +31,7 @@ Bridge Property Estate Agents is a fictional property business that's located in
 - CSS
   - The Website was styled using custom CSS in an external file.
 - Javascript
-  - 
+  - Particle JS was used for the animation
 - Python
   - Python was  used for the application using the Django Framework.
 - Github
