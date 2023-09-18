@@ -1,11 +1,7 @@
-from django.shortcuts import render, redirect, get_object_or_404, HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from contact.models import Contact
-from django.views.generic import ListView, FormView
-from .models import Appointment
-from .forms import AppointmentForm
-from .availability import check_availability
 
 
 def register(request):
@@ -80,24 +76,3 @@ def delete_button(request, id):
     delete.delete()
     messages.success(request, 'You have deleted your query')
     return redirect('dashboard')
-
-
-class AppointmentList(ListView):
-    model = Appointment
-
-
-class AppointmentView(FormView):
-    form_class = AppointmentForm
-    template_name = 'appointment_form.html'
-
-    def form_valid(self, form):
-        data = form.cleaned_data
-        available_appointments = []
-        if check_availability(data['appointment_time']):
-            available_appointments.append(data['appointment_time'])
-        booking = Appointment.objects.create(
-            user = request.user,
-            appointment_time=data['appointment_time']
-        )
-        booking.save()
-        return HttpResponse(booking)

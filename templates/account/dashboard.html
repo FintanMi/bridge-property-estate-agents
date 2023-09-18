@@ -51,8 +51,6 @@
                                 <td>{{ con.listing }}</td>
                                 <td>
                                     <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}">View Listing</a>
-                                </td><td>
-                                    <a class="btn btn-light index-btn" href="#">Make Appointment</a>
                                 </td>
                                 <td>
                                     <a class="btn btn-delete" href="{% url 'delete_button' con.id %}" onclick="return confirm('Are you sure you want to delete this listing?')"><i class="fa fa-trash"></i> Delete</a>
