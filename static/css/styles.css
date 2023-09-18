@@ -490,6 +490,10 @@ Buttons
     color: #fff;
     text-transform: uppercase;
 }
+.arrow-btn {
+    display: inline-block;
+    color: #e9e6f6;
+}
 .showcase {
     margin-top: 50px
 }
@@ -613,7 +617,7 @@ Features Slider
     position: relative;
     min-height: 400px;
     background: url('../img/home.jpg') no-repeat center center;
-    object-fit: cover;
+    background-size: cover;
 }
 .features-img {
     width: 50%;
