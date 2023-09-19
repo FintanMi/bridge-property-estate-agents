@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from contact.models import Contact
 from listings.models import Listing
-from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin, PermissionRequiredMixin
-from django.views.generic import DeleteView, CreateView, UpdateView, ListView
 from .forms import StaffListingForm
 from .decorators import allowed_users, staff_only
 
@@ -90,10 +88,9 @@ def staffdashboard(request):
 
 
 @login_required(login_url='login')
-@allowed_users(allowed_roles=['admin', 'staff'])
-def updateListings(request, id):
-    listing = Listing.objects.get(id)
-    form = StaffListingForm(instance=listing)
+@staff_only
+def update_listing(request, id):
+    listing = get_object_or_404(Listing, pk=id)
 
     if request.method == 'POST':
         form = StaffListingForm(request.POST, instance=listing)
@@ -101,26 +98,23 @@ def updateListings(request, id):
             form.save()
             return redirect('/')
 
+    form = StaffListingForm(instance=listing)
     context = {'form': form}
-    return render(request, 'account/staffdashboard.html', context)
+    return render(request, 'account/update_listing_form.html', context)
 
 
-# class StaffDashboardView(LoginRequiredMixin, UpdateView):
-#     template_name = 'staffdashboard.html'
-#     success_url = 'staffdashboard'
-#     model = Contact
-#     form_class = StaffListingForm
+@login_required(login_url='login')
+@allowed_users(allowed_roles=['admin', 'staff'])
+def updateListingForm(request):
+    form = StaffListingForm()
+    if request.method == 'POST':
+        form = StaffListingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
 
-#     def form_valid(self, form):
-#         form.instance.staff = self.request.user
-#         date = form.cleaned_data['contact_date']
-
-#     def test_func(self):
-#         """ Test user is staff or throw 403 """
-#         if self.request.user.is_staff:
-#             return True
-#         else:
-#             return self.request.user == self.get_object().customer
+    context = {'form': form}
+    return render(request, 'account/update_listing_form.html', context)
 
 
 @login_required(login_url='login')

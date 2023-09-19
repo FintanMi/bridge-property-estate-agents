@@ -56,7 +56,7 @@
                                 <a class="btn btn-sm index-btn" href="{% url 'listing' staff.listing_id %}">View Listing</a>
                             </td>
                             <td>
-                                <a class="btn btn-sm index-btn" href="#">Update</a>
+                                <a class="btn btn-sm index-btn" href="{% url 'update_listing' staff.listing_id %}">Update</a>
                             </td>
                             <td>
                                 <a class="btn btn-sm btn-delete" href="{% url 'delete_button' staff.id %}"
@@ -74,6 +74,12 @@
     </div>
 </section>
 <section class="update-listing">
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn index-btn" href="{% url 'update_listing_form' %}">Update Listing</a>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock %}

@@ -1,0 +1,11 @@
+{% load static %}
+{% block content %}
+<div class="col-md-12">
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" name="Submit">
+    </form>
+</div>
+{% endblock %}

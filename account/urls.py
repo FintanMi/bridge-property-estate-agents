@@ -9,4 +9,6 @@ urlpatterns = [
     path('dashboard', views.dashboard, name='dashboard'),
     path('staffdashboard/', views.staffdashboard, name='staffdashboard'),
     path('delete_button/<str:id>/', views.delete_button, name='delete_button'),
+    path('update_listing_form', views.updateListingForm, name='update_listing_form'),
+    path('update_listing/<str:id>/', views.update_listing, name='update_listing'),
 ]
