@@ -82,8 +82,7 @@ def dashboard(request):
 @login_required(login_url='login')
 @staff_only
 def staffdashboard(request):
-    staff_contact = Contact.objects.order_by(
-        '-contact_date').filter(user_id=request.user.id)
+    staff_contact = Contact.objects.all().order_by('-contact_date')
     context = {
         'staff_contact': staff_contact
     }
