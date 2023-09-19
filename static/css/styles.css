@@ -492,7 +492,7 @@ Buttons
 }
 .arrow-btn {
     display: inline-block;
-    color: #e9e6f6;
+    color: #0c0042;
 }
 .showcase {
     margin-top: 50px
@@ -611,8 +611,22 @@ Custom Slider Controls (Flickity)
 }
 
 /* ==========================================================================
-Features Slider
+Features
 ========================================================================== */
+.features-intro {
+    padding: 60px 0;
+}
+#canvas-basic {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.intro {
+    width: 90%;
+    margin: 0 auto;
+    padding: 75px;
+    display: flex;
+}
 .features-bg {
     position: relative;
     min-height: 400px;
@@ -630,7 +644,7 @@ Features Slider
     position: relative;
     padding: 11% 100px 10% 100px;
     height: 400px;
-    background-image: linear-gradient(to bottom, #0c0042, rgb(30, 0, 166))
+    color: #0c0042;
 }
 .features-slider ul {
     margin: 0;

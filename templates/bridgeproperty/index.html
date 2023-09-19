@@ -3,37 +3,23 @@
 {% load humanize %}
 {% block title %} | Welcome {% endblock %}
 {% block content %}
-<section class="features-intro">
+<section class="features-intro" id="canvas-basic">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 nopadding features-intro-img">
-                <div class="features-bg">
-                    <div class="texture-overlay"></div>
-                    <div class="features-img">
-                        <figure>
-                            <img src="{% static 'img/home.jpg' %}" alt="Home for sale image">
-                        </figure>
-                    </div>
+            <div class="intro">
+                <div class="features-info">
+                    <h2>Recent Listings</h2>
+                    <p>Search for the latest properties on the market.
+                        We work with a range of developers and home builders
+                        to deliver the best quality homes
+                    </p>
+                    <p><a href="{% url 'listings' %}" class="arrow-btn">
+                            Check our properties</a></p>
                 </div>
-            </div>
-            <div class="col-md-6 nopadding">
-                <div class="features-slider">
-                    <ul class="slides" id="featuresSlider">
-                        <li>
-                            <h1>What are you looking for?</h1>
-                            <p>Our estate agents are trusted by thousands of buyers nationwide</p>
-                            <p><a href="{% url 'about' %}" class="arrow-btn">Find out why</a></p>
-                        </li>
-                        <li>
-                            <h1>Recent Listings</h1>
-                            <p>Search for the latest properties on the market.
-                                We work with a range of developers and home builders
-                                to deliver the best quality homes
-                            </p>
-                            <p><a href="{% url 'listings' %}" class="arrow-btn">
-                                Check our properties</a></p>
-                        </li>
-                    </ul>
+                <div class="features-info">
+                    <h2>What are you looking for?</h2>
+                    <p>Our estate agents are trusted by thousands of buyers nationwide</p>
+                    <p><a href="{% url 'about' %}" class="arrow-btn">Find out why</a></p>
                 </div>
             </div>
         </div>
@@ -45,7 +31,7 @@
 
 <section class="features-list" id="features">
     <div class="container">
-        <h3 class="text-center mb-3">Latest Listings</h3>
+        <h2 class="text-center mb-3">Latest Listings</h2>
         <div class="row">
             {% if listings %}
                 {% for listing in listings %}

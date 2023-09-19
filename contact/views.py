@@ -3,7 +3,7 @@ from .models import Contact
 from django.contrib import messages
 
 
-def contact(request):
+def contact(request, user_id):
     if request.method == 'POST':
         listing_id = request.POST['listing_id']
         listing = request.POST['listing']
