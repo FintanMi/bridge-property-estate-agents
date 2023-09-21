@@ -63,14 +63,21 @@ The listing images were taken from Pexels which is a royalty free image site.
 
 ## Testing
 Ensure a user can sign up
+
 Steps:
+
 1. Head over to site, click the hamburger icon to reveal options and click Register
 2. Enter details as required
 3. Click Register
+
 Expected:
+
 The newly registered user is logged in and brought to the dashboard page
+
 Actual:
+
 The newly registered user is logged in and brought to the dashboard page
+
 <hr>
 Ensure a user can log out
 Steps:
