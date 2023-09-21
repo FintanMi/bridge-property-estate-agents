@@ -9,6 +9,17 @@ Bridge Property Estate Agents is a fictional property business that's located in
 - [Testing](#testing)
 
 ## User-Experience-Design
+
+### Features
+
+**Navbar**
+
+The navbar is located by clicking the hamburger icon which then displays the links for About, Property Listings, Dashboard, Logout when users are logged in. Before users sign in, it will display About, Property Listings, Login, Register.
+
+**Home Page**
+
+The home page contains 
+
 ### Site Goals
 The site is aimed for estate agents to be able to display a list of houses for sale and have the capacity for updating and removing listings as is necessary.
 The site also allows users to view houses on an intuitive and easy to use website. Users can contact estate agents about any house on the site and logged in users are able to see which listings they've inquired about on their dashboard.
