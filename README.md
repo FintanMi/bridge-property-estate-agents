@@ -8,7 +8,7 @@ Bridge Property Estate Agents is a fictional property business that's located in
 - [Technologies](#technologies)
 - [Testing](#testing)
 
-# User-Experience-Design
+## User-Experience-Design
 ### Site Goals
 The site is aimed for estate agents to be able to display a list of houses for sale and have the capacity for updating and removing listings as is necessary.
 The site also allows users to view houses on an intuitive and easy to use website. Users can contact estate agents about any house on the site and logged in users are able to see which listings they've inquired about on their dashboard.
@@ -60,6 +60,74 @@ The listing images were taken from Pexels which is a royalty free image site.
 * dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
 * Django== - Framework used to build the application
 * gunicorn== - Installed as dependency with another package
+
+## Testing
+Ensure a user can sign up
+Steps:
+1. Head over to site, click the hamburger icon to reveal options and click Register
+2. Enter details as required
+3. Click Register
+Expected:
+The newly registered user is logged in and brought to the dashboard page
+Actual:
+The newly registered user is logged in and brought to the dashboard page
+<hr>
+Ensure a user can log out
+Steps:
+1. Login to the website
+2. Click hamburger icon to reveal logout option and click it
+3. User should be redirected to home page
+Expected:
+User is logged out
+Actual:
+User is logged out
+<hr>
+Ensure a user can query a listing
+Steps:
+1. Either on the home page or on the listings page, click the more info button
+2. Click the 'Make An Inquiry' button and a modal will pop up
+3. Property line will be populated with listing address
+4. Fill out the form, logged in users will have some details prepopulated
+5. When all details are filled out click send
+Expected:
+Form submits, the modal disappears and user is still on the listing page
+Actual:
+Form submits, the modal disappears and user is still on the listing page
+<hr>
+Ensure a user booking can be deleted
+Steps:
+1. Navigate to user dashboard
+2. Logged in users can see what listings they've queried
+3. Click the delete button
+4. Listing will be deleted and user will remain on the dashboard page
+Expected:
+Listing is deleted and user remains on their dashboard
+Actual:
+Listing is deleted and user remains on their dashboard
+<hr>
+Ensure staff can access the staff dashboard
+Steps:
+1. Click the hamburger icon and click log in
+2. Staff are redirected to staff dashboard which shows all listings that have been queried
+Expected:
+Staff are redirected to the staff dashboard
+Actual:
+Staff are redirected to the staff dashboard
+<hr>
+Ensure staff can create a listing when logged into the website
+Steps:
+1. Click the hamburger icon and click log in
+2. Staff are redirected to staff dashboard
+3. At the bottom of the page, click 'Create Listing'
+4. Staff is redirected to another page with a form allowing them to create a listing
+5. If is published is checked and submit button is clicked, the new listing will be available to view
+6. When the submit button is clicked, staff will be redirected to the staff dashboard
+Expected:
+Staff can create a new listing and publish it on the website when logged in
+Actual:
+Staff can create a new listing and publish it on the website when logged in
+<hr>
+
 
 ## Deployment
 
