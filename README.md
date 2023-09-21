@@ -3,9 +3,15 @@
 Bridge Property Estate Agents is a fictional property business that's located in Celbridge, Kildare. The website is made to allow potential customers to browse houses that are for sale nationwide. If customers are interested in viewing a property, they can get in contact with an estate agent via a form. Staff can then easily manage inquries and listings.
 
 ## Table of Contents
+- [User-Experience-Design](#user-experience-design)
 - [Styling](#styling)
 - [Technologies](#technologies)
 - [Testing](#testing)
+
+# User-Experience-Design
+### Site Goals
+The site is aimed for estate agents to be able to display a list of houses for sale and have the capacity for updating and removing listings as is necessary.
+The site also allows users to view houses on an intuitive and easy to use website. Users can contact estate agents about any house on the site and logged in users are able to see which listings they've inquired about on their dashboard.
 
 ### Database-Design
 The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected to the listings, realtors, account and contact apps, linked by key relationships.
