@@ -25,8 +25,8 @@
                 <div class="overlay overlay-boxify">
                     <nav>
                         <ul>
-                            <li><a href="{% url 'about' %}/#about">About</a></li>
-                            <li><a href="{% url 'listings' %}/#listings">Property Listings</a></li>
+                            <li><a href="{% url 'about' %}#about">About</a></li>
+                            <li><a href="{% url 'listings' %}#listings">Property Listings</a></li>
                         </ul>
                         <ul>
                             {% if user.is_authenticated %}
@@ -49,8 +49,8 @@
                                     </form>
                                 </li>
                             {% else %}
-                            <li><a href="{% url 'login' %}/#login">Login</a></li>
-                            <li><a href="{% url 'register' %}/#register">Register</a></li>
+                            <li><a href="{% url 'login' %}#login">Login</a></li>
+                            <li><a href="{% url 'register' %}#register">Register</a></li>
                             {% endif %}
                         </ul>
                     </nav>
