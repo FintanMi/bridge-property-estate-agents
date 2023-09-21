@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} | Staff Dashboard {% endblock %}
 {% block content %}
-<section id="showcase-inner" class="py-5 text-white">
+<section id="showcase-inner" class="py-5 text-white" name="staffdashboard">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
@@ -53,7 +53,7 @@
                             <td>{{ staff.message }}</td>
                             <td>{{ staff.contact_date }}</td>
                             <td>
-                                <a class="btn btn-sm index-btn" href="{% url 'listing' staff.listing_id %}">View Listing</a>
+                                <a class="btn btn-sm index-btn" href="{% url 'listing' staff.listing_id %}/#listing">View Listing</a>
                             </td>
                             <td>
                                 <a class="btn btn-sm index-btn" href="{% url 'update_listing' staff.listing_id %}">Update</a>
@@ -77,7 +77,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <a class="btn index-btn" href="{% url 'update_listing_form' %}">Update Listing</a>
+                <a class="btn index-btn" href="{% url 'update_listing_form' %}">Create Listing</a>
             </div>
         </div>
     </div>

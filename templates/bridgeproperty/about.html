@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} | About Us {% endblock %}
 {% block content %}
-<section id="showcase-inner" class="py-5 text-white">
+<section id="showcase-inner" class="py-5 text-white" name="about">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
@@ -65,7 +65,7 @@
         you get the best possible outcome.
     </h4>
     <hr>
-    <a href="{% url 'listings' %}" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
+    <a href="{% url 'listings' %}/#listings" class="btn btn-secondary text-white btn-lg">View Our Featured Listings</a>
 </section>
 
 <!-- Team -->
@@ -127,3 +127,4 @@
     </div>
 </section>
 {% endblock %}
+

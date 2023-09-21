@@ -3,12 +3,11 @@
 {% load humanize %}
 {% block title %} | Browse Our Listings {% endblock %}
 {% block content %}
-<section id="showcase-inner" class="py-5 text-white">
+<section id="showcase-inner" class="py-5 text-white" name="listings">
     <div class="container">
         <div class="row text-center">
             <div class="col-md-12">
                 <h1 class="display-4">Browse Our Properties</h1>
-                <!-- <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p> -->
             </div>
         </div>
     </div>
@@ -76,7 +75,7 @@
                             </div>
                         </div>
                         <hr>
-                        <a href="{% url 'listing' listing.id %}" class="btn btn-block btn-info">More Info</a>
+                        <a href="{% url 'listing' listing.id %}/#listing" class="btn btn-block btn-info">More Info</a>
                     </div>
                 </div>
             </div>

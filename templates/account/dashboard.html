@@ -50,7 +50,7 @@
                                 <td>{{ con.id }}</td>
                                 <td>{{ con.listing }}</td>
                                 <td>
-                                    <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}">View Listing</a>
+                                    <a class="btn btn-light index-btn" href="{% url 'listing' con.listing_id %}/#listing">View Listing</a>
                                 </td>
                                 <td>
                                     <a class="btn btn-delete" href="{% url 'delete_button' con.id %}" onclick="return confirm('Are you sure you want to delete this listing?')"><i class="fa fa-trash"></i> Delete</a>
@@ -63,15 +63,6 @@
                     <p>There are no inquiries</p>
                 {% endif %}    
             </div>
-        </div>
-    </div>
-</section>
-<section class="staffonly">
-    <div class="container">
-        <div class="row text-center">
-            <p>
-                Staff can access their dashboard here:<strong><a href="{% url 'staffdashboard' %}"> Staff Dashboard</a></strong>
-            </p>
         </div>
     </div>
 </section>

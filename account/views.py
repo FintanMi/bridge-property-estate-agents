@@ -53,7 +53,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             messages.success(request, 'You have logged in')
-            return redirect('dashboard')
+            return redirect('staffdashboard')
         else:
             messages.error(request, 'Invalid login credentials')
             return redirect('login')
@@ -123,4 +123,4 @@ def delete_button(request, id):
     delete = get_object_or_404(Contact, pk=id)
     delete.delete()
     messages.success(request, 'You have deleted your query')
-    return redirect('dashboard')
+    return redirect('staffdashboard')

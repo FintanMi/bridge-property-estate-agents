@@ -17,16 +17,16 @@
                         <div class="col-md-12">
                             <h1 class="animated fadeInDown">Bridge Property Estate Agents</h1>
                             <h3>Find you dream house</h3>
-                            <a href="{% url 'about' %}" class="use-btn animated fadeInUp">About</a>
-                            <a href="{% url 'listings' %}" class="learn-btn animated fadeInUp">Property Listings</a>
+                            <a href="{% url 'about' %}/#about" class="use-btn animated fadeInUp">About</a>
+                            <a href="{% url 'listings' %}/#listings" class="learn-btn animated fadeInUp">Property Listings</a>
                         </div>
                     </div>
                 </div>
                 <div class="overlay overlay-boxify">
                     <nav>
                         <ul>
-                            <li><a href="{% url 'about' %}">About</a></li>
-                            <li><a href="{% url 'listings' %}">Property Listings</a></li>
+                            <li><a href="{% url 'about' %}/#about">About</a></li>
+                            <li><a href="{% url 'listings' %}/#listings">Property Listings</a></li>
                         </ul>
                         <ul>
                             {% if user.is_authenticated %}
@@ -36,7 +36,7 @@
                                 {% else %}
                                 class="nav-item"
                                 {% endif %}
-                                ><a href="{% url 'dashboard' %}" class="nav-link">
+                                ><a href="{% url 'staffdashboard' %}" class="nav-link">
                                     Welcome {{ user.username }}
                                 </a></li>
                                 <li class="nav-item">
@@ -49,8 +49,8 @@
                                     </form>
                                 </li>
                             {% else %}
-                            <li><a href="{% url 'login' %}">Login</a></li>
-                            <li><a href="{% url 'register' %}">Register</a></li>
+                            <li><a href="{% url 'login' %}/#login">Login</a></li>
+                            <li><a href="{% url 'register' %}/#register">Register</a></li>
                             {% endif %}
                         </ul>
                     </nav>
