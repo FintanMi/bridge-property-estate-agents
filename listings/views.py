@@ -16,7 +16,7 @@ def index(request):
 
 
 def listing(request, listing_id):
-    listing = get_object_or_404(Listing, pk=listing_id)
+    listing = get_object_or_404(Listing, pk = listing_id)
     context = {
         'listing': listing,
     }
@@ -30,25 +30,25 @@ def search(request):
     if 'keywords' in request.GET:
         kw = request.GET['keywords']
         if kw:
-            queryset_list = queryset_list.filter(description__icontains=kw)
+            queryset_list = queryset_list.filter(description__icontains = kw)
 
     # town
     if 'town' in request.GET:
         town = request.GET['town']
         if town:
-            queryset_list = queryset_list.filter(town__iexact=town)
+            queryset_list = queryset_list.filter(town__iexact = town)
 
     # province
     if 'province' in request.GET:
         province = request.GET['province']
         if province:
-            queryset_list = queryset_list.filter(province__iexact=province)
+            queryset_list = queryset_list.filter(province__iexact = province)
     
     # price
     if 'price' in request.GET:
         price = request.GET['price']
         if price:
-            queryset_list = queryset_list.filter(price__lte=price)
+            queryset_list = queryset_list.filter(price__lte = price)
 
     context = {
         'price_choices': price_choices,
