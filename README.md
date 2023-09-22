@@ -94,6 +94,19 @@ Staff and logged in users have their own dashboard page where they can see queri
 ![Navbar](docs/staff_dash.JPG)
 ![Navbar](docs/user_dash.JPG)
 
+**Single Listing Page**
+
+Users can get detailed information on a listing when they click the more info button. They will be able to see the estate agent who owns the listing and how to contact them if they would like to find out more info or make an appointment.
+
+![Navbar](docs/single_listing.JPG)
+![Navbar](docs/single_listings2.JPG)
+
+**Contact Modal**
+
+Users can contact staff via a short form. If users are logged in, there information will be prepopulated and the only parts of the form they need to fill out will be their phone number and message.
+
+![Navbar](docs/query_modal.JPG)
+
 ### Features
 
 **Navbar**
