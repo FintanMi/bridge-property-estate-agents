@@ -9,7 +9,34 @@ The live link can be found here: [Live Site - Bridge Property Estate Agents](htt
 - [Technologies](#technologies)
 - [Testing](#testing)
 
-## User-Experience-Design
+# User-Experience-Design
+
+## The-Scope-Plane
+
+* Responsive Design - Site should be fully functional on all devices
+* Ability to perform CRUD functionality on Listings
+* Restricted role based features
+* Home and About pages with listing information
+
+## The-Structure-Plane
+
+### Features
+
+**Navigation Menu**
+
+The following navigation items are available on all pages:
+  * About -> about.html - Available to everyone
+  * Property Listings -> listings.html - Available to everyone
+  * Dashboard -> dashboard.html - Available to everyone
+  * Staff Dashboard -> staffdashboard.html - Available to staff only
+  * Login -> login.html - Visible to logged out users
+  * Register -> register.html - Visible to logged out users
+  * Logout -> logout.html - Visible to logged in users
+
+The navigation menu is displayed on all pages as a hamburger icon on all devices, so as to not take up too much space.
+
+![Navbar](docs/readme_images/logged_out_navbar.jpg)
+![Navbar](docs/readme_images/logged_in_navbar.jpg)
 
 ### Features
 
