@@ -62,6 +62,37 @@ The footer contains the site icon that will bring users back to the home page wh
 ![Navbar](docs/business.JPG)
 ![Navbar](docs/photos.JPG)
 
+**Footer**
+
+The footer is added to the bottom of the page where a user can find the site icon, about link, property listings link and the social media links for Facebook and Twitter. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
+
+![Navbar](docs/footer.JPG)
+
+**Create Listing**
+
+When staff are logged into the site, they're able to create new listings without having to go the admin panel. This allows quick updates for both the user and staff.
+
+![Navbar](docs/create_listing.JPG)
+
+**Update Listing**
+
+When staff are logged into the site, they're able to update any listings without having to go the admin panel. This allows quick updates for both the user and staff.
+
+![Navbar](docs/update_listing.JPG)
+
+**View Listings**
+
+The listings page displays three cards in a row with info on the house and users have the option to see more listings via pagination that has been implemented on this page. This is visible to both logged in users and those just browsing the site.
+
+![Navbar](docs/view_listing.JPG)
+
+**Delete Listing**
+
+Staff and logged in users have their own dashboard page where they can see queries about listings. Staff have the option to delete a listing when a house is taken off the market while logged in users can delete a listing they have inquired about.
+
+![Navbar](docs/staff_dash.JPG)
+![Navbar](docs/user_dash.JPG)
+
 ### Features
 
 **Navbar**
