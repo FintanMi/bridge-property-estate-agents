@@ -107,6 +107,20 @@ Users can contact staff via a short form. If users are logged in, there informat
 
 ![Navbar](docs/query_modal.JPG)
 
+**About Page**
+
+Users have access to an about page to see what kind of business Bridge Property Estate Agents are operating. It shows who the top seller is and all team members with their contact information. A map is included above the footer to show the company office.
+
+![Navbar](docs/about.JPG)
+![Navbar](docs/about2.JPG)
+![Navbar](docs/about3.JPG)
+
+Favicon
+    * A site wide favicon was implemented.
+    * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+
+
+
 ### Features
 
 **Navbar**
@@ -126,6 +140,10 @@ The database was designed to allow CRUD functionality to be available to registe
 
 ### Security
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
+
+**403 Page**
+
+A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted.
 
 ## Styling
 ### Colour
