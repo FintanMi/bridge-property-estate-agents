@@ -84,7 +84,8 @@ When staff are logged into the site, they're able to update any listings without
 
 The listings page displays three cards in a row with info on the house and users have the option to see more listings via pagination that has been implemented on this page. This is visible to both logged in users and those just browsing the site.
 
-![Navbar](docs/view_listing.JPG)
+![Navbar](docs/listings.JPG)
+![Navbar](docs/listings2.JPG)
 
 **Delete Listing**
 
