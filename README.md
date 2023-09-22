@@ -54,6 +54,14 @@ Next is a photo section that will bring users to the listings page.
 
 The footer contains the site icon that will bring users back to the home page when clicked, and links to the about page and property listings page.
 
+![Navbar](docs/home_navbar.JPG)
+![Navbar](docs/features.JPG)
+![Navbar](docs/listings.JPG)
+![Navbar](docs/listings2.JPG)
+![Navbar](docs/search_form.JPG)
+![Navbar](docs/business.JPG)
+![Navbar](docs/photos.JPG)
+
 ### Features
 
 **Navbar**
