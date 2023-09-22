@@ -38,6 +38,22 @@ The navigation menu is displayed on all pages as a hamburger icon on all devices
 ![Navbar](docs/logged_out_navbar.JPG)
 ![Navbar](docs/logged_in_navbar.JPG)
 
+**Home Page**
+
+The home page contains a cascading blue colour with a brief description about finding your new home and a button to view listings and view the about page. This will immediately make it evident to the user, what the purpose of the website is.
+
+There is a features section that shows users the website has been used by thousands of people since the business began and the recent listings on offer.
+
+The lastest listings shows the three most recent homes uploaded to the site.
+
+The search form allows users to find a home based on five attributes but they don't have to select them all to find a house.
+
+The next section describes the areas where Bridge Property are industry leaders in.
+
+Next is a photo section that will bring users to the listings page.
+
+The footer contains the site icon that will bring users back to the home page when clicked, and links to the about page and property listings page.
+
 ### Features
 
 **Navbar**
