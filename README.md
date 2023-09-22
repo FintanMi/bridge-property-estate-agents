@@ -89,7 +89,7 @@ The listings page displays three cards in a row with info on the house and users
 
 **Delete Listing**
 
-Staff and logged in users have their own dashboard page where they can see queries about listings. Staff have the option to delete a listing when a house is taken off the market while logged in users can delete a listing they have inquired about.
+Staff and logged in users have their own dashboard page where they can see queries about listings. Staff have the option to delete a listing when a house is taken off the market while logged in users can delete a listing they have inquired about. A pop up message will ask if they're sure they want to delete the listing.
 
 ![Navbar](docs/staff_dash.JPG)
 ![Navbar](docs/user_dash.JPG)
@@ -115,11 +115,33 @@ Users have access to an about page to see what kind of business Bridge Property 
 ![Navbar](docs/about2.JPG)
 ![Navbar](docs/about3.JPG)
 
+**Messages**
+
+When staff and users sign in, log out or delete a listing, a message will be visible so they know their action was successful.
+
 Favicon
     * A site wide favicon was implemented.
     * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
+## The Skeleton Plane
 
+### Wireframes
+
+- Home Page
+
+- Register Page
+
+- Log in Page
+
+- Listings Page
+
+- Staff Dashboard
+
+- User Dashboard
+
+- Create Listing
+
+- Update Listing
 
 ### Features
 
@@ -145,7 +167,10 @@ Environment variables were stored in an env.py for local development for securit
 
 A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted.
 
-## Styling
+## The Surface Plane
+
+**Styling**
+
 ### Colour
 The main colours used were #1e00a6 and #0c0042 in a linear gradient to the bottom right to produce a dark blue colour.
 
