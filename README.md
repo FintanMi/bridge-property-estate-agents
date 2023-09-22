@@ -35,8 +35,8 @@ The following navigation items are available on all pages:
 
 The navigation menu is displayed on all pages as a hamburger icon on all devices, so as to not take up too much space.
 
-![Navbar](docs/logged_out_navbar.jpg)
-![Navbar](docs/logged_in_navbar.jpg)
+![Navbar](docs/logged_out_navbar.JPG)
+![Navbar](docs/logged_in_navbar.JPG)
 
 ### Features
 
