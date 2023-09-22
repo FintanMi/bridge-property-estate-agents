@@ -99,7 +99,7 @@ Staff and logged in users have their own dashboard page where they can see queri
 Users can get detailed information on a listing when they click the more info button. They will be able to see the estate agent who owns the listing and how to contact them if they would like to find out more info or make an appointment.
 
 ![Navbar](docs/single_listing.JPG)
-![Navbar](docs/single_listings2.JPG)
+![Navbar](docs/single_listing2.JPG)
 
 **Contact Modal**
 
