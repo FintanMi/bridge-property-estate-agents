@@ -7,13 +7,23 @@ The live link can be found here: [Live Site - Bridge Property Estate Agents](htt
 - [User-Experience-Design](#user-experience-design)
   - [The-Strategy-Plane](#the-strategy-plane)
     - [Site-Goals](#site-goals)
+    - [Agile Planning](#agile-planning)
+      - [User Stories](#user-stories)
   - [The-Scope-Plane](#the-scope-plane)
   - [The-Structure-Plane](#the-structure-plane)
   - [The-Skeleton-Plane](#the-skeleton-plane)
     - [Wireframes](#wireframes)
+    - [Database-Design](#database-design)
+    - [Security](#security)
 - [Styling](#styling)
 - [Technologies](#technologies)
 - [Testing](#testing)
+- [Deployment](#deployment)
+  - [Version Control](#version-control)
+  - [Heroku Deployment](#heroku-deployment)
+  - [Run Locally](#run-locally)
+  - [Fork Project](#fork-project)
+- [Credits](#credits)
 
 # User-Experience-Design
 
