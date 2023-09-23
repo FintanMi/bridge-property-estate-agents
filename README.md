@@ -129,19 +129,43 @@ Favicon
 
 - Home Page
 
+![Home Page](docs/home_web.JPG)
+
+- About Page
+
+![About Page](docs/about_wf.JPG)
+
 - Register Page
+
+![Register Page](docs/register_wf.JPG)
 
 - Log in Page
 
+![Login Page](docs/login_wf.JPG)
+
 - Listings Page
+
+![Listings Page](docs/listings_wf.JPG)
 
 - Staff Dashboard
 
+![Staff Dashboard](docs/staff_dash_wf.JPG)
+
 - User Dashboard
+
+![User Dashboard](docs/user_dash_wf.JPG)
 
 - Create Listing
 
+![Create Listing](docs/create_listing_wf.JPG)
+
 - Update Listing
+
+![Update Listing](docs/update_listing_wf.JPG)
+
+- Query Modal
+
+![Query Modal](docs/query_modal_wf.JPG)
 
 ### Features
 
