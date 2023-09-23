@@ -5,6 +5,12 @@ The live link can be found here: [Live Site - Bridge Property Estate Agents](htt
 
 ## Table of Contents
 - [User-Experience-Design](#user-experience-design)
+  - [The-Strategy-Plane](#the-strategy-plane)
+    - [Site-Goals](#site-goals)
+  - [The-Scope-Plane](#the-scope-plane)
+  - [The-Structure-Plane](#the-structure-plane)
+  - [The-Skeleton-Plane](#the-skeleton-plane)
+    - [Wireframes](#wireframes)
 - [Styling](#styling)
 - [Technologies](#technologies)
 - [Testing](#testing)
