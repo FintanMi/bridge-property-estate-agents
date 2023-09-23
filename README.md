@@ -27,6 +27,12 @@ The live link can be found here: [Live Site - Bridge Property Estate Agents](htt
 
 # User-Experience-Design
 
+## The Strategy Plane
+
+### Site Goals
+
+The aim of this site is display houses for sale
+
 ## The-Scope-Plane
 
 * Responsive Design - Site should be fully functional on all devices
