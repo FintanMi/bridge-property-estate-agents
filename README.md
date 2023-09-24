@@ -577,3 +577,7 @@ Most commonly, forks are used to either propose changes to someone else's projec
 - On the top right of the page under the header, click the fork button.
 
 - This will create a duplicate of the full project in your GitHub Repository.
+
+## Credits
+
+Photos for the listings were taken from unsplash and pexels.
