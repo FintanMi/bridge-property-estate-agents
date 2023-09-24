@@ -31,7 +31,28 @@ The live link can be found here: [Live Site - Bridge Property Estate Agents](htt
 
 ### Site Goals
 
-The aim of this site is display houses for sale
+The aim of this site is to display houses for sale. Staff can create and update listings while users of the site are available to view and inquiry about a listing.
+
+### Agile Planning
+
+This project was developed using agile methodologies by delivering small features in incremental sprints. The Kanban board was created using github projects and can be viewed to see more information on the project cards.
+
+#### User Stories
+
+The following user stories were completed:
+
+- Create a base.html page and structure so that other pages can reuse the layout
+- Create a static folder so that images, css and javascript work on the website
+- Create a footer with social media links
+- Implement a 403 error page to redirect unauthorised users
+- Implement functionality to allow users register and have access to the sites features
+- As staff, I want to be able to create a new listing when there's a new house for sale
+- As staff, I want to be able to update listings
+- As staff, I want to be able to delete a listing
+- As a user, I want to be able to view different listings so I can decide if a house is in my budget
+- As a user, I want to be able to contact staff and inquire about a listing
+- As a user, I want to be able to delete a query on my dashboard
+- As staff, I need to deploy my site to Heroku so it is live for users
 
 ## The-Scope-Plane
 
