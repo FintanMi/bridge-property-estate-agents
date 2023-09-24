@@ -520,6 +520,16 @@ Search bar displays listing/s with attributes selected in the search form
 
 <hr>
 
+## Validator Testing
+
+Pages were put through [w3 HTML Validator](https://validator.w3.org/).
+
+All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators.
+
+JavaScript code was run through [JSHINT](https://jshint.com).
+
+Lighthouse report showed 
+
 ## Deployment
 
 ### Version Control
