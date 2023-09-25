@@ -520,6 +520,11 @@ Search bar displays listing/s with attributes selected in the search form
 
 <hr>
 
+### Negative Testing
+
+1. Users can't access the staff dashboard, they get redirected to their own dashboard
+2. Users can't access the create listing page, a message tell them they're unauthorised to view this page
+
 ## Validator Testing
 
 Pages were put through [w3 HTML Validator](https://validator.w3.org/).
