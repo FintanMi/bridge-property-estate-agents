@@ -225,7 +225,9 @@ The site is aimed for estate agents to be able to display a list of houses for s
 The site also allows users to view houses on an intuitive and easy to use website. Users can contact estate agents about any house on the site and logged in users are able to see which listings they've inquired about on their dashboard.
 
 ### Database-Design
-The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected to the listings, realtors, account and contact apps, linked by key relationships.
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected to the listings, realtors, account and contact apps, linked by key relationships. Listings are connected to estate agents by a foreign key.
+
+![Entity Relationship](docs/relation_diagram.JPG)
 
 ### Security
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
@@ -276,8 +278,9 @@ The listing images were taken from Pexels which is a royalty free image site.
 * cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
 * dj-database-url==0.5.0 - Used to parse database url for production environment
 * dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
-* Django== - Framework used to build the application
-* gunicorn== - Installed as dependency with another package
+* Django - Framework used to build the application
+* gunicorn - Installed as dependency with another package
+* psycopg2 - Implemented for Heroku deployment
 
 ## Testing
 Ensure a user can sign up
@@ -595,4 +598,4 @@ Most commonly, forks are used to either propose changes to someone else's projec
 
 ## Credits
 
-Photos for the listings were taken from unsplash and pexels.
+Photos for the listings were taken from unsplash and pexels. The following tutorials were used during this project - Dennis Ivy (Django Beginners Course) on Youtube, Rathan Kumar (Django in Real Life - Build Complex Restaurant Platform) on Udemy. 
